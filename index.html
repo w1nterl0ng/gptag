@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Electron App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <div class="left-pane">
+        <input type="text" id="searchBox" placeholder="Search...">
+        <ul id="fileList"></ul>
+    </div>
+    <div class="right-pane">
+        <form id="fileForm">
+            <label for="songName">Song Name:</label>
+            <input type="text" id="songName">
+            <label for="subtitle">Subtitle:</label>
+            <input type="text" id="subtitle">
+            <label for="album">Album:</label>
+            <input type="text" id="album">
+            <label for="transcriber">Transcriber:</label>
+            <input type="text" id="transcriber">
+            <button type="button" id="saveButton">Save</button>
+        </form>
+    </div>
+</div>
+<script src="renderer.js"></script>
+</body>
+</html>

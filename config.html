@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Configuration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Configuration</h1>
+<form id="configForm">
+    <label for="folderPaths">Add Folder Paths:</label>
+    <input type="text" id="folderPaths" placeholder="Enter paths separated by commas">
+    <button type="button" id="saveConfigButton">Save</button>
+</form>
+<script>
+    document.getElementById('saveConfigButton').addEventListener('click', () => {
+        const folderPaths = document.getElementById('folderPaths').value.split(',');
+        window.electron.ipcRenderer.send('save-config', folderPaths);
+    });
+</script>
+</body>
+</html>
